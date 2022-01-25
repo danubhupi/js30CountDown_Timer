@@ -1,5 +1,11 @@
 let timeLeft=document.querySelector('.display__time-left');
 let endTime=document.querySelector('.display__end-time');
+
+document.querySelectorAll('[data-time]')
+.forEach(button=>button.addEventListener('click',(event)=>{
+    timer(event.target.dataset.time);
+}))
+
 let countdown;
 
 timer=(seconds)=>{
